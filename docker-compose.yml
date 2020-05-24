@@ -36,31 +36,4 @@ services:
     # В случае остановки, возобновлять работу контейнера
     restart: always
     # Запуск контейнера (php-fpm) зависит от того, запущен ли указанный (mysql), т.е. ждем, пока не запустится (mysql)
-    depends_on:
-      # Тот самый контейнер (mysql), который должен буть запущен перед пуском того, в котором (php-fpm) пишется это
-      - mysql
 
-  #php-cli:
-    #build:
-      #context: ./docker/php-cli
-    #volumes:
-      #- ./app:/webAppDir
-    #command: sleep 10000
-    #container_name: ${PROJECT_NAME}-php-cli
-
-  mysql:
-    image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
-    volumes:
-      - mysql:/var/lib/mysql
-    container_name: ${PROJECT_NAME}-mysql
-    restart: always
-    environment:
-      - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
-      - "MYSQL_DATABASE=${MYSQL_DATABASE}"
-      - "MYSQL_USER=${MYSQL_USER}"
-      - "MYSQL_PASSWORD=${MYSQL_PASSWORD}"
-      - "MYSQL_DUMP_PATH=${MYSQL_DUMP_PATH}"
-
-volumes:
-  mysql:
