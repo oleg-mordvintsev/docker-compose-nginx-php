@@ -19,11 +19,10 @@
 
 ## Установка и запуск
 1) В корневой директории будущего проекта, где уже будут храниться исполняемые файлы, необходимо выполнить команду в терминале:
-<details>
-    <summary>Подробнее...</summary>
-    Подробности
-<details>
-```
+    <details>
+        <summary>Подробнее...</summary>
+        Подробности
+    </details>
 
 
 >`git clone https://github.com/oleg-mordvintsev/docker-compose-nginx-php.git .`  
