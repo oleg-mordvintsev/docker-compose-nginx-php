@@ -1,9 +1,6 @@
 # Docker-compose with PHP + NGINX
 Это пустой проект для создания связки контейнеров докер сервисов (PHP и NGINX) с помощью docker-compose
 
-## Copyright
-Мордвинцев О.Ю.  
-
 ## Технологии:
 - Docker
 - Docker-compose
