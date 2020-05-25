@@ -14,13 +14,21 @@
 Эти компоненты уже должны быть Вами установлены для локального ( на вашем ПК) развертывания.
 - git <details>
         <summary>подробнее...</summary>
-        Для клонирования репозитория, хотя вы можете и скачать архивом.<br/>
-        Программа git доступна тут https://git-scm.com/
+        Необходим для клонирования репозитория, хотя вы можете и скачать архивом.<br/>
+        Для Windows git доступен тут https://git-scm.com/<br/>
+        Для Linux от root выполнить установку. Для Debian подобных (Ubuntu) `apt install git` 
+        или Для Red Hat подобных (CentOS) `yum install git`<br/>
+        Если Вы не root, то попробуйте команду `sudo -i`, которая поможет выполнить команды Выше от root.
     </details>
 - docker <details>
         <summary>подробнее...</summary>
         Для создания контейнеров с нужными сервисами. Сразу содержит и docker-compose, т.е. отдельно установки 
-        не требует. Скачать docker можно тут https://www.docker.com/
+        не требует.<br/>
+        Для Windows docker доступен тут https://www.docker.com/<br/>
+        Для Linux от root выполнить установку. Для Debian подобных (Ubuntu) `apt install docker`
+        или Для Red Hat подобных (CentOS) `yum install docker`<br/>
+        Если Вы не root, то попробуйте команду `sudo -i`, которая поможет выполнить команды Выше от root.<br/>
+        Так же стоит обратить внимание на инструкцию по установке https://losst.ru/ustanovka-docker-na-ubuntu-16-04
     </details>
 
 
