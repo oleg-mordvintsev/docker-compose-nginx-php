@@ -63,7 +63,7 @@
 Во время выполнения может быть выведено много данных, но итогом джолжен быть следующий вывод в терминале:
 
 > `Creating docker-compose-nginx-php-nginx   ... done`  
-> `Creating docker-compose-nginx-php-php-cli ... done`  
+> `Creating docker-compose-nginx-php-php-fpm ... done`  
 
 3) Не закрывая терминал запускаем браузер и вводим адрес http://127.0.0.1:8901
 
@@ -77,43 +77,10 @@
 > По умолчанию, для показа сайта устанавливается единственный файл `app/index.php`, т.е. в директории `app` может 
 находиться Ваш сайт, работающий только на php.
 
+3) Можно ли выполнять команды терминала в docker контейнерах?
+> Да, это возможно, для запуска можете использовать следующие команды, соответствующие двум запускаемым контейнерам
+`docker exec -it docker-compose-nginx-php-nginx bash`
+`docker exec -it docker-compose-nginx-php-php-fpm bash`
 
-
-
-
-1) В рабочей Linux среде выполнить в терминале клонирование базового проекта из стартовой ветки:
-
->`git clone https://github.com/msverdlov/seagem/tree/Template-for-first-deploy-to-local-branch /home/seagem`  
-  
-2) Перейти в каталог:
->`cd /home/seagem`  
-
-3) Отредактироватаь файл .env, вставить значение своих переменных.  
-После добавить `.env` в файл .gitignoge  
-  
-4) Необходимо забилдить проект и тут же стартануть все сервисы  
-   с удалением контейнеров которых больше нет в docker-compose.yml:
->`docker-compose up --build --remove-orphans`
-##### После успешного завершения в консоле будет ответ:
-> `Creating seagem-nginx   ... done`  
-> `Creating seagem-php-cli ... done`  
-> `Creating seagem-php-fpm ... done`  
-> `Creating seagem-mysql ... done`  
-  
-####   Внимание: все последуюшие действия (пока сервисы подняты)  выполняются именно в контейнере
-5) Перейти в каталог:
->`cd /home/seagem/docker/php-cli`  
-  
-6) Заходим в контейнер с php-cli:
-> `docker exec -it seagem-php-cli bash`  
-  
-7) Создаем в контейнере проект Symfony с шаблонами для сайта:
-> `composer create-project symfony/website-skeleton app`  
-  
-8) После установки выполняем несколько команд, чтобы избавиться от вложенности папок:
-> `mv /symfony/app/* /symfony`  
-> `mv /symfony/app/.* /symfony`  
-> `rm -Rf app`  
-  
-9) Открываем в браузере `localhost` и если все установлено правильно  
-видим **Welcome to Symfony 5.0.8**
+4) Как мне сменить название проекта?
+> Необходимо отредактировать файл `.env` со строкой `PROJECT_NAME=`.
