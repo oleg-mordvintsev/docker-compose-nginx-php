@@ -86,4 +86,4 @@
 > Необходимо отредактировать файл `.env` со строкой `PROJECT_NAME=`.
 
 5) Где посмотреть общий список назначения портов, чтобы я лишний не занимал?
-> https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BF%D0%BE%D1%80%D1%82%D0%BE%D0%B2_TCP_%D0%B8_UDP
+> https://ru.wikipedia.org/wiki/Список_портов_TCP_и_UDP
