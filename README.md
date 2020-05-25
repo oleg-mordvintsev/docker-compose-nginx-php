@@ -35,8 +35,16 @@
     
 >`git clone https://github.com/oleg-mordvintsev/docker-compose-nginx-php.git .`  
 
-2) Текст
-2) Текст
+2) После того, как git получил необходимые файлы, надо запустить проект сследующей командой:
+    <details>
+        <summary>подробнее...</summary>
+        - up - Создать и запустить контейнеры
+        - --build - Создать или пересоздать контейнеры
+        - --remove-orphans - Удаляем контейнеры с сервисами проекта, которых нет в Compose файле
+    </details>
+
+>`docker-compose up --build --remove-orphans`  
+
 
 
 
