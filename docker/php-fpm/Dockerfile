@@ -1,13 +1,5 @@
+# Название контейнера с DockerHub
 FROM php:7.4-fpm
 
-RUN apt-get update && apt-get install -y \
-    libpq-dev \
-    wget \
-    zlib1g-dev \
-    libmcrypt-dev \
-    libzip-dev \
-    openssl
-
-#RUN docker-php-ext-install pdo pdo_mysql
-
+# Рабочая директория в контейнере (используется локальная, смотри docker-compose.yml в корне проект)
 WORKDIR /webAppDir
