@@ -60,6 +60,11 @@
 
 >`docker-compose up --build --remove-orphans`  
 
+Во время выполнения может быть выведено много данных, но итогом джолжен быть следующий вывод в терминале:
+
+> `Creating docker-compose-nginx-php-nginx   ... done`  
+> `Creating docker-compose-nginx-php-php-cli ... done`  
+
 3) Не закрывая терминал запускаем браузер и вводим адрес:
 
 >`http://127.0.0.1:8901`  
