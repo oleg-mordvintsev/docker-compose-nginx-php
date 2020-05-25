@@ -34,7 +34,7 @@
         Обратите внимание на точку в конце, она означает, что файлы скачаются в директорию, из которой 
         выполняется команда. Если Вы находитесь в директории проекта, но хотите установить в под директорию, 
         то используйте вместо точки название/путь до вложенной директории, к примеру: 
-        >`git clone https://github.com/oleg-mordvintsev/docker-compose-nginx-php.git directoryInner/directory` 
+        `git clone https://github.com/oleg-mordvintsev/docker-compose-nginx-php.git directoryInner/directory` 
     </details>
 
 ## Инструкция по установке 
