@@ -8,6 +8,6 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     openssl
 
-RUN docker-php-ext-install pdo pdo_mysql
+#RUN docker-php-ext-install pdo pdo_mysql
 
-WORKDIR /symfony
+WORKDIR /webAppDir
