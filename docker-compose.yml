@@ -51,5 +51,3 @@ services:
     container_name: ${PROJECT_NAME}-php-fpm
     # В случае остановки, возобновлять работу контейнера
     restart: always
-    # Запуск контейнера (php-fpm) зависит от того, запущен ли указанный (mysql), т.е. ждем, пока не запустится (mysql)
-
